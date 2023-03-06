@@ -1,2 +1,4 @@
 # DiplomaProjectsManagementApp
-12335
+Georgios Lypopoylos
+Trampas Leyteris
+Galanakis Michalis
