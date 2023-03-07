@@ -1,4 +1,4 @@
 # DiplomaProjectsManagementApp
 Georgios Lypopoylos
-Trampas Leyteris
+Trampas Leuteris
 Galanakis Michalis
