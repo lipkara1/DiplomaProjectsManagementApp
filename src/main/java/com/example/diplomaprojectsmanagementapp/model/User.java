@@ -1,4 +1,4 @@
-package model;
+package com.example.diplomaprojectsmanagementapp.model;
 
 
 import org.springframework.security.core.GrantedAuthority;
@@ -16,7 +16,7 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
+    @Column(name = "id")
     private int id;
 
     @Column(name = "username", unique = true)

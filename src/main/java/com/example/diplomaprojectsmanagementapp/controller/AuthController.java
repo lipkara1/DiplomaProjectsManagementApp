@@ -1,4 +1,4 @@
-package controller;
+package com.example.diplomaprojectsmanagementapp.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,8 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import model.User;
-import service.UserService;
+import com.example.diplomaprojectsmanagementapp.model.User;
+import com.example.diplomaprojectsmanagementapp.service.UserService;
 
 @Controller
 public class AuthController {

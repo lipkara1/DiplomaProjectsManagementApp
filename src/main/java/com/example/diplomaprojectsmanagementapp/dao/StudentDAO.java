@@ -1,6 +1,6 @@
-package dao;
+package com.example.diplomaprojectsmanagementapp.dao;
 
-import model.Student;
+import com.example.diplomaprojectsmanagementapp.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
