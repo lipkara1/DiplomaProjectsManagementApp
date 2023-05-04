@@ -1,39 +1,55 @@
 package model;
 
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "student id")
+    @Column(name = "student_id")
     private int id;
 
-    @Column(name = "first name")
-    private String firstName;
+    @Column(name = "full_name")
+    private String fullName;
 
-    @Column(name = "last name")
-    private String lastName;
+    @Column(name = "year_of_studies")
+    private int yearOfStudies;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "average_grade")
+    private float currAverGrade;
 
 
+    @Column(name = "number_courses")
+    private int numberOfCourses;
 
-    public Student(){}
 
-    public Student(int id, String firstName, String lastName, String email) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+    public Student() {
+
     }
 
-    public Student(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+    public Student(int id, String fullName, int yearOfStudies, float currAverGrade, int numberOfCourses) {
+        this.id = id;
+        this.fullName = fullName;
+        this.yearOfStudies = yearOfStudies;
+        this.currAverGrade = currAverGrade;
+        this.numberOfCourses = numberOfCourses;
+    }
+
+    public Student(String fullName, int yearOfStudies, float currAverGrade, int numberOfCourses) {
+        this.fullName = fullName;
+        this.yearOfStudies = yearOfStudies;
+        this.currAverGrade = currAverGrade;
+        this.numberOfCourses = numberOfCourses;
+    }
+
+    public int getYearOfStudies() {
+        return yearOfStudies;
+    }
+
+    public void setYearOfStudies(int yearOfStudies) {
+        this.yearOfStudies = yearOfStudies;
     }
 
     public int getId() {
@@ -44,37 +60,38 @@ public class Student {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public float getCurrAverGrade() {
+        return currAverGrade;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setCurrAverGrade(float currAverGrade) {
+        this.currAverGrade = currAverGrade;
     }
 
-    public String getEmail() {
-        return email;
+    public int getNumberOfCourses() {
+        return numberOfCourses;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setNumberOfCourses(int numberOfCourses) {
+        this.numberOfCourses = numberOfCourses;
     }
 
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", yearOfStudies=" + yearOfStudies +
+                ", currAverGrade=" + currAverGrade +
+                ", numberOfCourses=" + numberOfCourses +
                 '}';
     }
 }
