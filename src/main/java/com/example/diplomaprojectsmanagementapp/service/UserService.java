@@ -1,6 +1,6 @@
-package service;
+package com.example.diplomaprojectsmanagementapp.service;
 
-import model.User;
+import com.example.diplomaprojectsmanagementapp.model.User;
 
 public interface UserService {
     public void saveUser(User user);

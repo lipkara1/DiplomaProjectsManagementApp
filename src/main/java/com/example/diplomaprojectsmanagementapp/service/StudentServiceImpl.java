@@ -1,7 +1,7 @@
-package service;
+package com.example.diplomaprojectsmanagementapp.service;
 
-import model.Student;
-import model.Subject;
+import com.example.diplomaprojectsmanagementapp.model.Student;
+import com.example.diplomaprojectsmanagementapp.model.Subject;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package Config;
+package com.example.diplomaprojectsmanagementapp.Config;
 
 import java.util.ArrayList;
 import java.util.Collection;

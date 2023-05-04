@@ -1,4 +1,4 @@
-package service;
+package com.example.diplomaprojectsmanagementapp.service;
 
 import java.util.Optional;
 
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import dao.UserDAO;
-import model.User;
+import com.example.diplomaprojectsmanagementapp.dao.UserDAO;
+import com.example.diplomaprojectsmanagementapp.model.User;
 
 @Service
 public class UserServiceImpl implements UserService, UserDetailsService {
@@ -22,8 +22,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private UserDAO userDAO;
 
     @Override
-    public void saveUser(User user) {
-        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
+    public void saveUser(User user) {        String encodedPassword = bCryptPasswordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
         userDAO.save(user);
     }
