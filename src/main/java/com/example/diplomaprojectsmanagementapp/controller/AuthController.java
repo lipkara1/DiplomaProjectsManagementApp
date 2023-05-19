@@ -17,13 +17,13 @@ public class AuthController {
 
     @RequestMapping("/login")
     public String login() {
-        return "signin";
+        return "auth/signin";
     }
 
     @RequestMapping("/register")
     public String register(Model model) {
         model.addAttribute("user", new User());
-        return "signup";
+        return "auth/signup";
     }
 
     @RequestMapping("/save")
@@ -31,12 +31,12 @@ public class AuthController {
 
         if (userService.isUserPresent(user)) {
             model.addAttribute("successMessage", "User already registered!");
-            return "signin";
+            return "auth/signin";
         }
 
         userService.saveUser(user);
         model.addAttribute("successMessage", "User registered successfully!");
 
-        return "signin";
+        return "auth/signin";
     }
 }
